@@ -23,7 +23,6 @@ export default class Box extends Component {
             <line className="bottom2" x1="1000" y1="500" x2="-2000" y2="500" />
             <line className="right2" x1="1000" y1="0" x2="1000" y2="1500" />
           </svg>
-          
           <span>2018</span>
           <span>Matthew John Werdean</span>
         </div>

@@ -206,3 +206,7 @@
 	-webkit-transform: translateY(-1000px);
 	transform: translateY(-1000px);
 }
+
+.ran {
+    background-color: transparentize($color: pink, $amount: 0.4)
+}

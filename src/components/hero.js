@@ -18,7 +18,7 @@ export default class Hero extends Component {
     }
 
     handleScroll = (event) => {
-        var wScroll = 
+        var wScroll = event.srcElement.body.scrollTop
         console.log(wScroll)
     }
 
