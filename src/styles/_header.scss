@@ -1,0 +1,127 @@
+.header-left {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 5px 20px;
+
+    > * {
+        margin-left: 40px        
+    }
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-right {
+    margin-top: 10px; 
+    
+    > a {
+        cursor: pointer;
+        transition: 0.3s ease;
+        border-top: 1px solid rgba(0, 0, 0, 0);
+        border-bottom: 1px solid rgba(0, 0, 0, 0);
+        padding: 10px 0;
+        margin: 0 15px;
+    }
+
+    > a:hover {
+        border-top: 3px solid #000;
+        border-bottom: 3px solid #000;
+        padding: 4px 0;
+    }
+
+}
+
+li > ul > li a:hover {
+    color: gray;
+    transition: all .3s ease-in-out;
+}
+
+.header-show {
+    margin: 0px;
+    padding: 0px;
+
+    > li:hover {
+        background-color: white;
+
+        > ul {
+            display: flex;
+            flex-direction: column;
+            perspective: 1000px;
+
+            > li {
+                opacity: 0;
+                
+                @for $i from 1 through 8 {         
+                    &:nth-child(#{$i}) {
+                        animation-name: "menu";
+                        animation-duration: 200ms * $i;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    > * {
+        margin-left: 20px;
+    }
+}
+
+@keyframes menu {
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg) translateY(30px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg) translateY(0px)
+    }
+}
+.header-has-children {
+    display: none;
+    position: absolute;
+    background: white;
+    transition: all .5s ease-in-out;
+    color: black;
+    padding: 15px 30px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    transition: all .3 ease-in-out;
+    list-style-type: none;
+    position: fixed;
+    height: 65x;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    z-index: 10;
+    a {
+        color: black;        
+    }
+
+    > * > * {
+        margin: 20px 20px 5px 20px;        
+    }
+} 
+
+
+.header-logo {
+    height: 50px;
+    width: 70px;
+    margin-top: 5px;
+}
