@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 20px 5px 20px;
-
+    
     > * {
         margin-left: 40px        
     }
@@ -18,7 +18,6 @@ a {
 
 .header-right {
     margin-top: 10px; 
-    
     > a {
         cursor: pointer;
         transition: 0.3s ease;
@@ -26,6 +25,7 @@ a {
         border-bottom: 1px solid rgba(0, 0, 0, 0);
         padding: 10px 0;
         margin: 0 15px;
+ 
     }
 
     > a:hover {
@@ -119,9 +119,21 @@ nav {
     }
 } 
 
+.twentpx {
+    width: 150px;
+}
 
 .header-logo {
     height: 50px;
     width: 70px;
     margin-top: 5px;
+}
+
+.navNoShow {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.navShow {
+    opacity: 1;
 }
