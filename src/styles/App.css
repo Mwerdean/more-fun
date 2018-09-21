@@ -119,10 +119,20 @@ nav {
   nav > * > * {
     margin: 20px 20px 5px 20px; }
 
+.twentpx {
+  width: 150px; }
+
 .header-logo {
   height: 50px;
   width: 70px;
   margin-top: 5px; }
+
+.navNoShow {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; }
+
+.navShow {
+  opacity: 1; }
 
 .box-container {
   padding-top: 120px;
@@ -359,6 +369,18 @@ img {
   margin-top: 20%;
   position: absolute;
   z-index: 12; }
+
+.back-bird {
+  width: 100%;
+  height: 300px;
+  background-image: url(../assets/bird2.png);
+  background-size: 20%;
+  margin-top: 10%;
+  margin-left: 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  z-index: 5; }
 
 .layer1 {
   width: 100%;
