@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
 import gif from '../assets/namegif2.gif'
-=======
 import ReactDOM from 'react-dom'
 
->>>>>>> 8fde2a4f7a8b2d690a5031852cd0a25d1d8b719f
 export default class Hero extends Component {
     constructor(props) {
         super(props),
@@ -38,7 +35,6 @@ export default class Hero extends Component {
   render() {
     return (
       <div>
-
         <header className = "hero-box">
             <div className = "name" style = {{transform: `translate(0, ${this.state.transform})`}}></div>
             <div className = "fore-bird" style = {{transform: `translate(${this.state.transform}, -${this.state.transform})`}}></div>
@@ -48,12 +44,8 @@ export default class Hero extends Component {
             <div className = "layer3"></div>
             <div className = "layer4"></div>
         </header>
-<<<<<<< HEAD
-        <section className = "content">
-=======
 
         <section ref = {this.myRef} className = "content">
->>>>>>> 8fde2a4f7a8b2d690a5031852cd0a25d1d8b719f
             <article>
                 <h1>Matthew Werdean</h1>
             <div className = "name-gif" style = {{transform: `translate(0, ${this.state.transform})`}}>

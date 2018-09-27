@@ -17,7 +17,7 @@ export default class Header extends Component {
     }
 
     handleScroll = (event) => {
-        if(event.path[1].scrollY >= 1000) {
+        if(event.path[1].scrollY >= 800) {
             this.setState({ menuShow: true })
         } else {
             this.setState({ menuShow: false })
@@ -27,8 +27,8 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <nav>
-            <div className="header-left" className={`navNoShow ${this.state.menuShow ? 'navShow' : ''}`}>
+        <nav className={`navNoShow ${this.state.menuShow ? 'navShow' : ''}`}>
+            <div className="header-left" >
                 <ul className="header-show">
                     <li>First
                         <ul className="header-has-children">
@@ -43,7 +43,7 @@ export default class Header extends Component {
                 <ul className="header-show twentpx"></ul>
             </div>
             <img src="https://s3-us-west-1.amazonaws.com/thene/mw1.jpg" alt="logo" className="header-logo" />
-            <div className= {`header-right navNoShow ${this.state.menuShow ? 'navShow' : ''}`}>
+            <div>
                 <a>About</a>
                 <a>Third</a>
             </div>
